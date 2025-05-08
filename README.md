@@ -1,121 +1,212 @@
-# soundarts-summer-camp-
+# soundatrs-2025
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サウンドアーツ夏合宿</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+  <title>SOUND ARTS 夏合宿 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Rubik', sans-serif;
-    }
     body {
-      background: #ffffff;
-      color: #111;
+      margin: 0;
+      font-family: 'Rock Salt', cursive;
+      background: linear-gradient(135deg, #ff0080, #00ffff);
+      color: #fff;
       overflow-x: hidden;
     }
-    section {
-      width: 100vw;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    header {
+      background: #000;
+      padding: 50px 20px;
+      text-align: center;
+      color: #ffcc00;
+      font-size: 3em;
+      animation: neonFlash 1.5s infinite alternate;
+    }
+    @keyframes neonFlash {
+      from { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
+      to { text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff; }
+    }
+    .info-section, .fun-section, .gallery-section {
       padding: 60px 20px;
-      flex-direction: column;
       text-align: center;
     }
-    section:nth-child(even) {
-      background-color: #f4f4f4;
+    .info-section h2, .fun-section h2, .gallery-section h2 {
+      color: #000;
+      background: #fff700;
+      padding: 10px;
+      display: inline-block;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #ff0055;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2rem;
+    .info-box {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
       max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .fadein {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
+    .info-box div {
+      background: #000;
+      padding: 20px;
+      font-size: 1.2em;
+      border: 2px dashed #fff700;
+      transform: rotate(-1deg);
     }
-    .fadein.active {
-      opacity: 1;
-      transform: translateY(0);
+    .fun-img {
+      width: 250px;
+      animation: crazySpin 3s infinite linear;
+      margin: 30px 0;
     }
-    .hero {
-      background: url('https://source.unsplash.com/1600x900/?music,summer') center/cover no-repeat;
-      color: white;
+    @keyframes crazySpin {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.2); }
+      100% { transform: rotate(360deg) scale(1); }
     }
-    .hero h1 {
-      color: white;
-      text-shadow: 2px 2px 5px #000;
+    .cta {
+      background: #ffcc00;
+      padding: 25px;
+      text-align: center;
+      font-size: 1.5em;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+      margin-top: 40px;
+    }
+    .cta:hover {
+      transform: scale(1.2) rotate(-2deg);
+      background: #fff700;
+    }
+    .qr-section {
+      background: #111;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .qr-section h2 {
+      color: #00ff99;
+      margin-bottom: 20px;
+    }
+    .qr-img {
+      width: 200px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 15px;
+      border: 3px solid #fff;
+      transition: transform 0.3s;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.1);
+    }
+    /* Aboutセクション */
+    #about {
+      padding: 40px;
+      background-color: #222;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #fff;
+      margin-top: 40px;
+    }
+    #about h2 {
+      text-align: center;
+      color: #ffcc00;
+      font-size: 2em;
+    }
+    #about ul {
+      padding-left: 20px;
+      list-style-type: square;
+    }
+    #about li {
+      font-size: 1.3em;
+      margin: 10px 0;
+    }
+    /* Aboutリンク */
+    .about-link {
+      display: block;
+      text-align: center;
+      margin: 40px auto;
+      font-size: 1.5em;
+      color: #ffcc00;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .about-link:hover {
+      color: #fff700;
     }
   </style>
 </head>
 <body>
-  <section class="hero fadein">
-    <h1>サウンドアーツ夏合宿 2025</h1>
-    <p>この夏、一緒に最高の音を響かせよう！</p>
+  <header>SOUND ARTS 夏合宿 2025🔥</header>
+
+  <section class="info-section">
+    <h2>📅 合宿詳細</h2>
+    <div class="info-box">
+      <div>日程：2025年8月25日〜27日</div>
+      <div>場所：寺尾温泉</div>
+      <div>対象：部員全員</div>
+      <div>料金：3万〜（人が増えるほど安くなります！！）</div>
+    </div>
   </section>
 
-  <section class="fadein">
-    <h2>📅 開催日</h2>
-    <p>8月25日〜27日</p>
+  <section class="fun-section">
+    <h2>🎉 内容盛りだくさん！</h2>
+    <p>バンド練習、ライブ、海水浴、そして…</p>
+    <img src="https://media.giphy.com/media/IThjAlJnD9WNO/giphy.gif" alt="fun gif" class="fun-img">
+    <p style="font-size: 1.5em; color: #ff0077;">＼謎イベント勃発の予感！／</p>
+    <p style="font-size: 1.2em; color: #00ffcc;">何が起こるかは当日までヒミツ！</p>
   </section>
 
-  <section class="fadein">
-    <h2>📍 開催場所</h2>
-    <p>寺尾温泉</p>
+  <section class="gallery-section">
+    <h2>📸 写真で見る合宿の様子</h2>
+    <div class="gallery-grid">
+      <img src="https://www.info-toyama.com/storage/tourism_attractions/99815/responsive_images/e0UTRRocVxL9AJfbhqjlq4XLuIErvNDRX2pc79yG__666_387.png" alt="温泉施設">
+      <img src="https://terao.more-resort.com/_assets/facility/alt7f_1.jpg" alt="バンド練習風景">
+      <img src="https://www.info-toyama.com/storage/tourism_attractions/11038/responsive_images/XroSwWV8Pweq4FtEcOL8PG5rCouM1Sdphjy4MiYG__777_583.jpeg" alt="海水浴">
+      <img src="https://terao.more-resort.com/_assets/facility/music_main.jpg" alt="ライブの様子">
+    </div>
   </section>
 
-  <section class="fadein">
-    <h2>🎵 スケジュール</h2>
-    <p>
-      1日目：移動＆バンド練習<br>
-      2日目：合宿ライブ本番！<br>
-      3日目：海へGO！そして帰宅🌊
-    </p>
+  <div class="cta" onclick="alert('参加申し込みは部内LINEで受付中！')">
+    参加するしかないっしょ！🔥
+  </div>
+
+  <!-- Aboutリンク -->
+  <div class="about-link" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
+    About 合宿詳細
+  </div>
+
+  <!-- Aboutセクション -->
+  <section id="about">
+    <h2>持ち物リスト・イベントの流れ</h2>
+    <h3>持ち物リスト</h3>
+    <ul>
+      <li>着替え（3日分）</li>
+      <li>水着・バスタオル（海水浴用）</li>
+      <li>楽器・シールド・チューナーなど必要な機材</li>
+      <li>常備薬・保険証（コピーでも可）</li>
+      <li>お風呂セット（シャンプー・ボディソープ等）</li>
+      <li>合宿代（詳細が決まり次第発表）</li>
+    </ul>
+    <h3>イベントの流れ（しおり）</h3>
+    <ul>
+      <li><strong>8月25日</strong>：移動 → チェックイン → 練習 → ご飯 → 夜練習</li>
+      <li><strong>8月26日</strong>：朝ごはん → 昼ごはん → ライブ本番 → 入浴 → ご飯 → 自由時間</li>
+      <li><strong>8月27日</strong>：朝ごはん → 集合写真 → 海水浴 → 帰宅</li>
+    </ul>
   </section>
 
-  <section class="fadein">
-    <h2>💰 参加費</h2>
-    <p>3万円〜4万円（人数が増えると安くなります！助けて！）</p>
-  </section>
-
-  <section class="fadein">
-    <h2>📨 申し込み方法</h2>
-    <p>全体LINEに応募フォームを投稿予定！見逃さないで！</p>
-  </section>
-
-  <section class="fadein">
-    <h2>🎤 主催</h2>
-    <p>サウンドアーツ</p>
-  </section>
-
-  <script>
-    // スクロールでフェードイン（重複防止のため関数名を変更）
-    const fadeElements = document.querySelectorAll('.fadein');
-
-    const triggerFadeInScroll = () => {
-      const windowHeight = window.innerHeight;
-      fadeElements.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-          el.classList.add('active');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', triggerFadeInScroll);
-    window.
+  <!-- QRコードセクション -->
+  <section class="qr-section">
+    <h2>📱 QRコードでこのページをシェア！</h2>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&
